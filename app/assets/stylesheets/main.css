@@ -1,0 +1,58 @@
+*
+{
+	border: 0px solid black;
+    border-radius: 3px;
+    font-family: arial, verdana, sans-serif;
+}
+
+body
+{
+	background-color: white;
+	color: black;
+
+}
+
+.centered
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.buttonLink
+{
+	display: block;
+
+	text-align: center;
+
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	
+
+	border-radius: 15px;
+
+
+}
+.buttonLink:link {}
+.buttonLink:visited {}
+.buttonLink:hover {}
+.buttonLink:active { background-color: gray; }
+
+.topLink
+{
+	margin-top: 0px;
+}
+
+#B2Logo { border-style: none; }
+#homeLink
+{
+	display: block;	/*this is required for the background picture to display properly*/
+	height: inherit;
+}
+#homeLink:link { background-image: none; }
+#homeLink:visited {}
+#homeLink:hover {}
+#homeLink:active { background-image: url("B2LogoBackground.svg");
+                   background-repeat: no-repeat;
+                   background-size: 100% 100%; }

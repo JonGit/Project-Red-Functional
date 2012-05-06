@@ -1,0 +1,118 @@
+/*#wrapper
+{
+width: 1000px;
+height: 500px;
+border: 3px solid black;
+
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -500px;
+margin-top: -250px;
+}*/
+
+
+/*#logo
+{
+margin-top: 20px;
+margin-right: 20px;
+float: right;
+width: 100px;
+height:100px;
+//border: 3px solid black;
+}*/
+/*#logo:link { background-image: none; }
+#logo:visited {}
+#logo:hover {}
+#logo:active {
+	       background-image: url("B2LogoBackground.svg");
+	       background-repeat: no-repeat;
+	       background-size: 100px;
+	     }*/
+
+
+#paymentMethod
+{
+clear: both;
+margin-top: 30px;
+margin-right: 20px;
+float: right;
+width: 100px;
+height:200px;
+//border: 3px solid black;
+}
+
+.payMethod
+{
+   width: 100px;
+   height:30px;
+   vertical-align:middle;
+   text-align:center;
+   border-radius: 15px;
+   border: 3px solid black;
+}
+
+.buttonLink
+{
+	width: 93px;
+   	padding: 2px 0px;
+	border-width: 3px;
+	margin-top: 3px;
+}
+
+.payMethod:link {}
+.payMethod:visited {}
+.payMethod:hover {}
+.payMethod:active { background-color: gray; }
+
+/*#infoBox
+{
+	margin-top: 100px;
+	margin-left: 20px;
+	width: 700px;
+	height:200px;
+	border: 3px solid black;
+}*/
+
+
+#totalBox
+{
+margin-top: 50px;
+margin-left: 20px;
+width: 700px;
+height:100px;
+//border: 3px solid black;
+}
+
+#subtotal
+{
+   width: 200px;
+   height:30px;
+}
+
+#taxes
+{
+   width: 200px;
+   height:30px;
+}
+
+#total
+{
+   width: 200px;
+   height:30px;
+}
+
+table
+{
+  // border: 3px solid black;
+   //margin-top:20px;
+
+}
+
+td
+{
+  font-weight:bold;
+}
+
+
+

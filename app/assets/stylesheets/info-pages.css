@@ -1,0 +1,158 @@
+body
+{
+   font-weight: bold;
+}
+
+.borderBox
+{
+   border-width: 3px;
+}
+
+#wrapper
+{
+   width: 1000px;
+   height: 500px;
+
+   margin-left: -500px;
+   margin-top: -250px;
+}
+
+
+#logo
+{
+   margin-top: 20px;
+   margin-right: 20px;
+   float: right;
+   width: 100px;
+   height:100px;
+}
+
+#infoBox
+{
+   margin-top: 100px;
+   margin-left: 20px;
+   width: 700px;
+   height:200px;
+   overflow: auto;
+}
+
+
+#searchBox
+{
+   margin-top: 50px;
+   margin-left: 20px;
+   width: 700px;
+   height:100px;
+}
+
+#typeField
+{
+   width: 250px;
+   height:25px;
+}
+#content
+{
+   width: 400px;
+   height:25px;
+}
+#infoTbl
+{
+   margin-top:20px;
+   /*border:1;*/
+}
+td
+{
+   vertical-align:middle;
+}
+
+#title
+{
+   width: 400px;
+   text-align: center;
+   margin: auto;
+}
+
+#titleWrapper
+{
+   position: absolute;
+   left: 370px;
+   top: 62px;
+   margin-left: -200px;
+   width: 400px;
+}
+
+.navbarLink
+{
+   text-align: center;
+   border-width: 2px;
+   font-weight: bold;
+   text-decoration: none;
+   color: black;
+   display:inline-block;
+   //border-radius: 15px;
+}
+.navbarLink:link {}
+.navbarLink:visited {}
+.navbarLink:hover { background-color: gray;}
+.navbarLink:active { background-color: gray; }
+#navbarWrapper
+{
+   position: absolute;
+   margin-top: -5px;
+   margin-left:-5px;
+   width: 700px;
+   height:50px;
+   vertical-align:middle;
+   //border-width: 2px;
+}
+ul
+{
+   margin-left: -20px;
+}
+li
+{
+   padding: 2px;
+   list-style-type:none;
+   display:inline;
+
+}
+select
+{
+   font-weight: bold;
+   width: 250px;
+}
+input
+{
+   font-weight: bold;
+   width: 398px;
+}
+input::-webkit-input-placeholder,  input::-moz-placeholder {     color:black; }
+
+
+#dataTable
+{
+
+
+   width: 700px;
+   /*height: 200px;*/
+
+   margin-top: 0px;
+   margin-left: 0px;
+
+   border-collapse:collapse;
+
+
+
+}
+#dataTable th{
+   border: 1px solid black;
+   height: 20px;
+   resize: horizontal;
+}
+#dataTable td{
+   border: 1px solid gray;
+   height: 25px;
+   font-weight: normal;
+   padding-left: 2px;
+   resize: horizontal;
+}

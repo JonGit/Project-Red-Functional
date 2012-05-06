@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="B2LogoBackground.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="124.00037"
+     inkscape:cy="190.1453"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="750"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-752.36218)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3771"
+       d="m 247.98803,651.13751 0,210.5 c -57.20143,-0.27602 -103.46875,-47.29454 -103.46875,-105.25 l 0.0312,-2.90625 c 1.56128,-56.79502 47.35791,-102.07503 103.43755,-102.34375 z"
+       style="fill:#000000;fill-opacity:1;stroke:none;display:none" />
+    <path
+       transform="matrix(0.85923434,0,0,0.85923434,-62.07102,252.44805)"
+       sodipodi:end="6.2831127"
+       sodipodi:start="0"
+       d="m 415.1727,756.38751 c 0,93.72583 -75.07528,169.70563 -167.68532,169.70563 -92.61004,0 -167.685317,-75.9798 -167.685317,-169.70563 0,-93.72583 75.075277,-169.70563 167.685317,-169.70563 92.60529,0 167.67859,75.97229 167.68532,169.69331"
+       sodipodi:ry="169.70563"
+       sodipodi:rx="167.68532"
+       sodipodi:cy="756.38751"
+       sodipodi:cx="247.48738"
+       id="path3773"
+       style="fill:none;stroke:#000000;stroke-width:9.73680115;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc"
+       sodipodi:open="true" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3777"
+       y="955.00806"
+       x="36.194992"
+       style="font-size:159.02444458px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:'Times New Roman, Bold'"
+       xml:space="preserve"><tspan
+         y="955.00806"
+         x="36.194992"
+         id="tspan3779"
+         sodipodi:role="line">B</tspan></text>
+    <path
+       style="font-size:146.49342346000000000px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       d="M 151.21875 17.5 L 151.21875 282.5 C 223.23654 282.1524 281.5 222.9671 281.5 150 L 281.46875 146.34375 C 279.50306 74.83764 221.82419 17.83832 151.21875 17.5 z M 208.6875 97.34375 C 219.03545 97.343855 227.14929 100.13951 233.0625 105.71875 C 238.97557 111.29818 241.93743 118.23386 241.9375 126.53125 C 241.93743 131.2523 241.09905 135.76336 239.40625 140.03125 C 237.7133 144.29926 235.04681 148.76426 231.375 153.4375 C 228.94292 156.53718 224.52977 160.99477 218.1875 166.8125 C 211.84513 172.6303 207.84909 176.49881 206.15625 178.40625 C 204.46334 180.31374 203.08032 182.15668 202.03125 183.96875 L 241.9375 183.96875 L 241.9375 202.65625 L 171.5 202.65625 C 172.26298 195.59863 174.52881 188.91225 178.34375 182.59375 C 182.15867 176.27529 189.71468 167.88091 200.96875 157.4375 C 210.02917 148.99701 215.57443 143.28557 217.625 140.28125 C 220.39077 136.13258 221.7812 132.02219 221.78125 127.96875 C 221.7812 123.48628 220.56437 120.03326 218.15625 117.625 C 215.74803 115.21691 212.43157 114.03134 208.1875 114.03125 C 203.99104 114.03134 200.63592 115.28519 198.15625 117.8125 C 195.67652 120.33998 194.25647 124.54087 193.875 130.40625 L 173.84375 128.40625 C 175.03591 117.34303 178.7991 109.4102 185.09375 104.59375 C 191.38837 99.7775 199.24551 97.343855 208.6875 97.34375 z "
+       transform="translate(0,752.36218)"
+       id="text3781" />
+  </g>
+</svg>

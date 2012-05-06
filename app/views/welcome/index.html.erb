@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>B2 Shoes Main Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <%= stylesheet_link_tag    "main", "home", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+	<div id="mainContainer" class="centered">
+		<div class="column" id="leftColumn">
+			<a class="buttonLink topLink" href="transaction.html">Transaction</a>
+			<a class="buttonLink" href="refund.html">Refund</a>
+			<a class="buttonLink" href="sales_history.html">Sales History</a>
+			<a class="buttonLink" href="client_history.html">Client History</a>
+		</div>
+
+		<div class="column" id="centerColumn">			
+			<a id="homeLink" href="">
+				<%= image_tag "B2Logo.svg", :id => "B2logo", :class => "linkPicture", :alt => "Home", :width => 300, :height => 300 %>
+			</a>
+		</div>
+
+		<div class="column" id="rightColumn">
+			<a class="buttonLink topLink" href="store_locator.html">Store Locator</a>
+			<%= link_to "Inventory", "/inventory/index", :class => "buttonLink" %>
+			<a class="buttonLink" href="">Internal E-Mail</a>
+			<a class="buttonLink" href="">Quit</a>
+		</div>
+	</div>
+</body>
+</html>

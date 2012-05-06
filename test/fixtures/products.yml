@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  product_code: 1
+  price: 1
+  description: MyString
+  name: MyString
+  manufacturer: 1
+  sku: MyString
+  in_stock: 1
+  back_order: 1
+  sold: 1
+
+two:
+  product_code: 1
+  price: 1
+  description: MyString
+  name: MyString
+  manufacturer: 1
+  sku: MyString
+  in_stock: 1
+  back_order: 1
+  sold: 1

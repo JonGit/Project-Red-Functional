@@ -1,0 +1,31 @@
+/*--COLUMNS--*/
+.column
+{
+	width: 300px;
+	float: left;
+	margin-top: 34px;
+	margin-left: 10px;
+}
+#leftColumn
+{
+	margin-left: 0px;
+}
+#centerColumn
+{
+	margin-top: 0px;
+}
+
+#mainContainer
+{
+	width: 920px;
+	height: 300px;
+	margin-left: -460px;
+	margin-top: -150px;
+}
+
+.buttonLink
+{
+	margin-top: 10px;
+	border-width: 6px;
+	font-size: 30px;
+}
