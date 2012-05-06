@@ -1,2 +1,4 @@
 rake db:migrate
-rails s -e production
+PAUSE
+rails s
+PAUSE
