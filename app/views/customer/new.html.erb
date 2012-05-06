@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>B2 Shoe Store - Customer Information</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		  <%= stylesheet_link_tag    "main", "info-pages", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<style type="text/css">
+	#wrapper
+	{
+		width:  600px;
+		height: 400px;
+		border: 3px solid black;
+		border-radius: 3px;
+
+		margin-top:-200px;
+		margin-left:-300px;
+	}
+
+	#paybox
+	{
+		width:  450px;
+		height: 200px;
+
+
+		margin: auto;
+		margin-top:40px;
+
+	}
+	td
+	{
+		width: 225px;
+		height:50px;
+		font-size: 20px;
+		font-weight: bold;
+
+	}
+
+	#buttons
+	{
+
+	 	width: 300px;
+	 	height: 50px;
+
+		margin: auto;
+		margin-top: 80px;
+	}
+
+	.buttonLink
+	{
+
+		width : 130px;
+		height: 30px;
+		border-width: 3px;
+
+		padding-top: 10px;
+
+	}
+
+	#buttonLeft
+	{
+		float : left;
+
+	}
+	#buttonRight
+	{
+		margin-left : 164px ;
+	}
+	
+	input
+	{
+		width: 225px;
+	}
+	</style>
+</head>
+
+<body>
+
+<div  id="wrapper" class="centered">
+<%= form_tag("/customer/create", :id => "myForm") do %>
+
+			<div id="paybox" >
+					<table>
+						<tbody>
+							<!-- ><tr>
+								<td>Customer_ID:</td>
+
+								<td ><div class="borderBox moneyField" ><%= text_field_tag(:search, "", :tabindex => 1) %></div> </td>
+
+							</tr> -->
+							<tr>
+								<td>Last Name:</td>
+								<td ><div class="borderBox moneyField" ><%= text_field_tag(:last_name, "", :tabindex => 1) %></div> </td>
+
+							</tr>
+							<tr>
+								<td>First name:</td>
+								<td ><div class="borderBox moneyField" ><%= text_field_tag(:first_name, "", :tabindex => 2) %></div> </td>
+
+							</tr>
+							<tr>
+
+								<td>E-Mail:</td>
+								<td ><div class="borderBox moneyField" ><%= text_field_tag(:email, "", :tabindex => 3) %></div> </td>
+
+							</tr>
+							<tr>
+								<td>Phone Number:</td>
+								<td ><div class="borderBox moneyField"><%= text_field_tag(:phone_number, "", :tabindex => 4) %></div> </td>
+
+							</tr>
+						</tbody>
+				</table>
+		 </div>
+
+
+		<div id="buttons" >
+
+		<!--<input type="button" class="buttonLink" id="buttonLeft"   value="Back" onclick="goBack()" />-->
+
+		<a class="buttonLink " id="buttonLeft" href="" >BACK</a>
+
+        <a class="buttonLink " id="buttonRight" href="javascript: document.forms.myForm.submit()">SAVE</a>
+
+		</div>
+<% end %>
+
+</div>
+</body>
+</html>

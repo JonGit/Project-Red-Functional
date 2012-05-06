@@ -1,5 +1,5 @@
 class InventoryController < ApplicationController
-  def index
-    render "index", :layout => false
+  def inventory
+    render "inventory", :layout => false
   end
 end

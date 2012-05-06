@@ -1,7 +1,13 @@
 ProjectRed::Application.routes.draw do
+  get "customer/search"
+
+  get "customer/new"
+
+  post "customer/create"
+
   get "welcome/index"
-  get "inventory/index"
-  post "inventory/index"
+  get "inventory/inventory"
+  post "inventory/inventory"
   # post "inventory/index"
 
   # The priority is based upon order of creation:

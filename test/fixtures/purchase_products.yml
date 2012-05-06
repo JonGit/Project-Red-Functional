@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bill_id: 1
+  product_code: 1
+  amount_purchased: 1
+  price_when_purchased: 1
+  sales_clerk: MyString
+  integer: MyString
+
+two:
+  bill_id: 1
+  product_code: 1
+  amount_purchased: 1
+  price_when_purchased: 1
+  sales_clerk: MyString
+  integer: MyString

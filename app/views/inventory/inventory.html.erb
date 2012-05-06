@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>B2 Shoe Store - Inventory</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<%= stylesheet_link_tag    "main", "info-pages", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+<!-- <link rel="stylesheet" type="text/css" href="assets/info-pages.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="assets/main.css"> -->
+</head>
+
+<body onload="document.getElementById('options').focus() ">
+<div class="centered borderBox" id="wrapper">
+
+
+	<div  id="navbarWrapper">
+			<ul>
+			<li><%= link_to "Home", "/", :class => "navbarLink" %></li>
+			<!-- <li><a class="navbarLink"  href="/">Home</a></li> -->
+			<li><a class="navbarLink"  href="">Transaction</a></li>
+			<li><a class="navbarLink"  href="">Refund</a></li>
+			<li><a class="navbarLink"  href="">Sales History</a></li>
+			<li><a class="navbarLink"  href="">Client History</a></li>
+			<li><a class="navbarLink"  href="">Store Locator</a></li>
+
+			<!--<li><a class="navbarLink"  href="inventory.html">Inventory</a></li>-->
+			</ul>
+
+	</div>
+
+	<div id="titleWrapper"><h1 id="title">Inventory</h1></div>
+
+	<div id="logo">
+		<a id="homeLink" href="/">
+			<%= image_tag "B2Logo.svg", :id => "B2logo", :class => "linkPicture", :alt => "Home", :width => 100, :height => 100 %>
+		</a>
+	</div>
+
+	<div class="borderBox" id="infoBox">
+		<%= Product.where("? = ?", params[:column], params[:search]).first %>
+		<table id="dataTable">
+			<tr>
+				<th>Product Code</th>
+				<th>Price</th>
+				<th>Description</th>
+				<th>Name</th>
+				<th>Manufacturer</th>
+				<th>SKU</th>
+				<th>Stock</th>
+				<th>Sold</th>
+				<th>Backordered</th>
+			</tr>
+			<% if params.has_key?(:column) && params.has_key?(:search)%>
+				<% Product.where(params[:column] => params[:search]).each do |product| %>
+				<tr>
+					<td><%= product.product_code %></td>
+					<td><%= product.price %></td>
+					<td><%= product.description %></td>
+					<td><%= product.name %></td>
+					<td><%= product.manufacturer %></td>
+					<td><%= product.sku %></td>
+					<td><%= product.in_stock %></td>
+					<td><%= product.sold %></td>
+					<td><%= product.back_order %></td>
+				</tr>
+				<% end %>
+			<% else %>
+				<% Product.all.each do |product| %>
+				<tr>
+					<td><%= product.product_code %></td>
+					<td><%= product.price %></td>
+					<td><%= product.description %></td>
+					<td><%= product.name %></td>
+					<td><%= product.manufacturer %></td>
+					<td><%= product.sku %></td>
+					<td><%= product.in_stock %></td>
+					<td><%= product.sold %></td>
+					<td><%= product.back_order %></td>
+				</tr>
+				<% end %>
+			<% end %>
+		</table>
+	</div>
+
+	<div class="borderBox" id="searchBox">
+	<%= form_tag("/inventory/inventory", :id => "myForm") do %>
+		<table id="infoTbl">
+			<tbody>
+				<tr>
+					<td>Search by: </td>
+
+					<td>Search:</td>
+				</tr>
+				<tr>
+					<td><div class="borderBox" id="typeField">
+					<%= select_tag(:column, options_for_select([["Product Code", :product_code],
+																 ["Price", :price],
+																 ["Name", :name],
+																 ["Manufacturer", :manufacturer],
+																 ["SKU", :sku],
+																 ["In Stock", :in_stock],
+																 ["Back ordered", :back_order],
+																 ["Sold", :sold]]), :tabindex => 1) %>
+						</div> </td>
+
+					<td>
+						<div class="borderBox" id="content">
+							<%= text_field_tag(:search, "", :tabindex => 2) %>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	<% end %>
+	</div>
+
+
+	<div id="quit">
+
+	</div>
+
+ <div></div>
+ </div>
+ </body>
+ </html>

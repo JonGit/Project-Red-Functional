@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120506052000) do
+ActiveRecord::Schema.define(:version => 20120506215838) do
+
+  create_table "customers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "employees", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "address"
+    t.integer  "type_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "products", :force => true do |t|
     t.integer  "product_code"
@@ -25,6 +44,26 @@ ActiveRecord::Schema.define(:version => 20120506052000) do
     t.integer  "sold"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "purchase_products", :force => true do |t|
+    t.integer  "bill_id"
+    t.integer  "product_code"
+    t.integer  "amount_purchased"
+    t.integer  "price_when_purchased"
+    t.string   "sales_clerk"
+    t.string   "integer"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  create_table "purchases", :force => true do |t|
+    t.integer  "customer_id"
+    t.datetime "purchase_date"
+    t.string   "credit_card_number"
+    t.string   "debit_card_number"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end
