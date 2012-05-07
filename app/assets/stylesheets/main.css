@@ -56,3 +56,12 @@ body
 #homeLink:active { background-image: url("B2LogoBackground.svg");
                    background-repeat: no-repeat;
                    background-size: 100% 100%; }
+#address
+{
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18pt;
+	margin: auto;
+	width: 700px;
+	text-align: center;
+}

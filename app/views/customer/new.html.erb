@@ -127,11 +127,11 @@
 		</div>
 		
 		<br/>
-		<p style="width: 1000px;">
+		<div style="width: 1000px; overflow: auto;">
 		<% Customer.all.each do |customer|%>
 		<%= customer.first_name + " " + customer.last_name + " with phone number " + customer.phone_number + " and email " + customer.email %><br>
 		<% end %>
-		</p>
+		</div>
 <% end %>
 
 </div>
