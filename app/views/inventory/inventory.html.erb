@@ -40,7 +40,7 @@
 
 	<div class="borderBox" id="infoBox">
 		<%= Product.where("? = ?", params[:column], params[:search]).first %>
-		<table id="dataTable" class="resizable">
+		<table id="dataTable" class="resizable" style="width: 800px;">
 			<tr>
 				<th>Product Code</th>
 				<th>Price</th>

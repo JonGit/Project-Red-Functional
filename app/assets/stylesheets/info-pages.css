@@ -136,7 +136,7 @@ select
 input
 {
    font-weight: bold;
-   
+
 }
 input::-webkit-input-placeholder,  input::-moz-placeholder {     color:black; }
 
@@ -145,7 +145,7 @@ input::-webkit-input-placeholder,  input::-moz-placeholder {     color:black; }
 {
 
 
-   width: 700px;
+   width: 697px;
    //height: 200px;
 
    margin-top: 0px;
