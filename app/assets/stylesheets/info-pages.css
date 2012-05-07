@@ -8,6 +8,7 @@ body
    border-width: 3px;
 }
 
+
 #wrapper
 {
    width: 1000px;
@@ -121,10 +122,21 @@ select
    font-weight: bold;
    width: 250px;
 }
+
+#enterProduct
+{
+  width:100px;
+}
+
+#enterContent
+{
+   width:398px;
+}
+
 input
 {
    font-weight: bold;
-   width: 398px;
+   
 }
 input::-webkit-input-placeholder,  input::-moz-placeholder {     color:black; }
 
@@ -134,7 +146,7 @@ input::-webkit-input-placeholder,  input::-moz-placeholder {     color:black; }
 
 
    width: 700px;
-   /*height: 200px;*/
+   //height: 200px;
 
    margin-top: 0px;
    margin-left: 0px;
@@ -147,12 +159,10 @@ input::-webkit-input-placeholder,  input::-moz-placeholder {     color:black; }
 #dataTable th{
    border: 1px solid black;
    height: 20px;
-   resize: horizontal;
 }
 #dataTable td{
    border: 1px solid gray;
    height: 25px;
    font-weight: normal;
-   padding-left: 2px;
-   resize: horizontal;
 }
+

@@ -1,4 +1,9 @@
 ProjectRed::Application.routes.draw do
+  get "transaction/purchase"
+  post "transaction/purchase"
+
+  #get "transaction/delete"
+
   get "customer/search"
 
   get "customer/new"

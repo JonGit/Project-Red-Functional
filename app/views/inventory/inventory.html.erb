@@ -19,7 +19,7 @@
 			<ul>
 			<li><%= link_to "Home", "/", :class => "navbarLink" %></li>
 			<!-- <li><a class="navbarLink"  href="/">Home</a></li> -->
-			<li><a class="navbarLink"  href="">Transaction</a></li>
+			<li><a class="navbarLink"  href="/transaction/purchase">Transaction</a></li>
 			<li><a class="navbarLink"  href="">Refund</a></li>
 			<li><a class="navbarLink"  href="">Sales History</a></li>
 			<li><a class="navbarLink"  href="">Client History</a></li>
@@ -40,7 +40,7 @@
 
 	<div class="borderBox" id="infoBox">
 		<%= Product.where("? = ?", params[:column], params[:search]).first %>
-		<table id="dataTable">
+		<table id="dataTable" class="resizable">
 			<tr>
 				<th>Product Code</th>
 				<th>Price</th>

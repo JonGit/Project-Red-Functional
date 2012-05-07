@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>B2 Shoe Store - Transaction</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<%= stylesheet_link_tag    "cash-transaction", "info-pages", "main", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+	<address id="address">FAIRVIEW<br>6801 ROUTE TRANSCANADIENNE<br>POINTE CLAIRE, QUÉBEC H9R 1C5<br>TÉLÉPHONE : (514) 695-6823</address>
+<div class="centered borderBox" id="wrapper">
+
+<div id="titleWrapper"><h1 id="title">Transaction</h1></div>
+
+	<div  id="navbarWrapper">
+			<ul>
+			<li><a class="navbarLink"  href="/">Home</a></li>
+			<!--<li><a class="navbarLink"  href="transaction.html">Transaction</a></li>-->
+			<li><a class="navbarLink"  href="">Refund</a></li>
+			<li><a class="navbarLink"  href="">Sales History</a></li>
+			<li><a class="navbarLink"  href="">Client History</a></li>
+
+			<li><a class="navbarLink"  href="">Store Locator</a></li>
+			<li><a class="navbarLink"  href="/inventory/inventory">Inventory</a></li>
+			</ul>
+
+	</div>
+
+
+	<div id="logo">
+	<a id="homeLink" href="/">
+		<%= image_tag "B2Logo.svg", :id => "B2logo", :class => "linkPicture", :alt => "Home", :width => 100, :height => 100 %>
+	</a>
+
+	</div>
+
+
+	<div id="paymentMethod">
+		<a class="buttonLink topLink" href="">CASH</a>
+		<a class="buttonLink"         href="">DEBIT</a>
+		<a class="buttonLink"         href="">VISA</a>
+		<a class="buttonLink"         href="">MC</a>
+
+		<a class="buttonLink"         href="">AMEX</a>
+		<a class="buttonLink"         href="">GIFT CARD</a>
+	</div>
+
+
+	<div class="borderBox" id="infoBox">
+
+	<table  id="dataTable" class="resizable">
+	<tr>
+		<th style="width : 100px">Product Code</th>
+		<th style="width : 50px">Qty </th>
+		<th	style="width : 100px">Unit Price</th>
+		<th style="width : 100px">Price</th>
+	</tr>
+	<% rTotal = 0 %>
+	<% TempPurchase.all.each do |temp| %>
+	<tr>
+		<td><%= temp.product_code %></td>
+		<td><%= temp.amount_purchased %></td>
+		<% price = Product.where(:product_code => temp.product_code).first.price %>
+		<td><%= price %></td>
+		<% total = price * temp.amount_purchased %>
+		<% rTotal += total%>
+		<td><%= total %></td>
+	</tr>
+	<%end %>
+	</table>
+
+	</div>
+
+
+	<div class="borderBox" id="totalBox">
+
+		<table id="infoTbl">
+			<tbody>
+				<tr>
+
+					<td>Sub-Total : </td>
+					<td>Taxes :</td>
+					<td>Total:</td>
+				</tr>
+				<tr>
+					<td style="font-size:20px"><div class="borderBox"  id="subtotal"><%= rTotal %></div> </td>
+<% tps = rTotal * 0.05%>
+<% rTotal += tps %>
+<% tvq = rTotal * 0.095%>
+<% rTotal += tvq%>
+					<td style="font-size:20px"><div class="borderBox"  id="taxes"><%= tps + tvq %></div> </td>
+					<td style="font-size:20px"><div class="borderBox" id="total"><%= rTotal %></div> </td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+			<div class="borderBox" id="addItemBox">
+
+					<table id >
+						<tbody>
+							<tr>
+								<td>Product Code:</td>
+								<td ><div class="borderBox moneyField"  > <input id="enterProduct" type="text" name="search" placeholder="xx"/></div> </td>
+
+							</tr>
+							<tr>
+								<td>Quantity:</td>
+								<td ><div class="borderBox moneyField" ><input id="enterProduct"  type="text" name="search" placeholder="yy"/></div> </td>
+							</tr>
+							<tr>
+								<td  colspan="2" align="center"><a class="buttonLink addButton" href="">Add</a> </td>
+
+							</tr>
+
+						</tbody>
+				</table>
+		 </div>
+
+
+
+
+
+	<div id="quit"></div>
+
+	</div>
+ </body>
+ </html>
