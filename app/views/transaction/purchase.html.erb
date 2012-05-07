@@ -57,19 +57,22 @@
 		<th style="width : 50px">Qty </th>
 		<th	style="width : 100px">Unit Price</th>
 		<th style="width : 100px">Price</th>
+		<th style="width : 100px">Remove</th>
 	</tr>
 	<% rTotal = 0 %>
 	<% TempPurchase.all.each do |temp| %>
 	<tr>
 		<td><%= temp.product_code %></td>
 		<td><%= temp.amount_purchased %></td>
-		<% price = Product.where(:product_code => temp.product_code).first.price %>
+		<% first = Product.where(:product_code => temp.product_code).first %>
+		<% if !(first.nil?) then price = first.price else price = 0 end %> 
 		<td><%= price %></td>
 		<% total = price * temp.amount_purchased %>
 		<% rTotal += total%>
 		<td><%= total %></td>
+		<td><%= link_to "delete", :action => "delete", :controller => "transaction", :delete => temp.id %></td>
 	</tr>
-	<%end %>
+	<% end %>
 	</table>
 
 	</div>
@@ -91,35 +94,44 @@
 <% rTotal += tps %>
 <% tvq = rTotal * 0.095%>
 <% rTotal += tvq%>
-					<td style="font-size:20px"><div class="borderBox"  id="taxes"><%= tps + tvq %></div> </td>
-					<td style="font-size:20px"><div class="borderBox" id="total"><%= rTotal %></div> </td>
+					<td style="font-size:20px"><div class="borderBox"  id="taxes"><%= (tps + tvq).ceil %></div> </td>
+					<td style="font-size:20px"><div class="borderBox" id="total"><%= rTotal.ceil %></div> </td>
 				</tr>
 			</tbody>
 		</table>
 
 	</div>
-
+			<%= form_tag("/transaction/purchase", :id => "myForm") do %>
 			<div class="borderBox" id="addItemBox">
 
 					<table id >
 						<tbody>
 							<tr>
 								<td>Product Code:</td>
-								<td ><div class="borderBox moneyField"  > <input id="enterProduct" type="text" name="search" placeholder="xx"/></div> </td>
+								<td ><div class="borderBox moneyField"  >
+									<!-- <input id="enterProduct" type="text" name="search" placeholder="xx"/> -->
+									<%= text_field_tag(:enter_product, "", :tabindex => 1) %>
+								</div> </td>
 
 							</tr>
 							<tr>
 								<td>Quantity:</td>
-								<td ><div class="borderBox moneyField" ><input id="enterProduct"  type="text" name="search" placeholder="yy"/></div> </td>
+								<td ><div class="borderBox moneyField" >
+									<!-- <input id="enterProduct"  type="text" name="search" placeholder="yy"/> -->
+									<%= text_field_tag(:enter_amount, "", :tabindex => 2) %>
+									</div> </td>
 							</tr>
 							<tr>
-								<td  colspan="2" align="center"><a class="buttonLink addButton" href="">Add</a> </td>
+								<td  colspan="2" align="center">
+									<a class="buttonLink addButton" href="javascript: document.forms.myForm.submit()">Add</a>
+									</td>
 
 							</tr>
 
 						</tbody>
 				</table>
 		 </div>
+		 <% end %>
 
 
 
