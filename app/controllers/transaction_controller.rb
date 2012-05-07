@@ -5,6 +5,10 @@ class TransactionController < ApplicationController
       if !(temp.nil?)
         temp.amount_purchased += params[:enter_amount].to_i
         temp.save
+      elsif Product.where(:product_code => params[:enter_product]).first.nil?
+        #can't add the product
+        render "purchase", :layout => false, :js => "alert('Product " + params[:enter_product].to_s + " does not exist.');"
+        return     
       else
         TempPurchase.create(:product_code => params[:enter_product].to_s, :amount_purchased => params[:enter_amount].to_i)
       end
